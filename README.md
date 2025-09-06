@@ -108,7 +108,7 @@
     <!-- HERO -->
     <div class="hero">
       <div class="logo">
-        <img src="http://myoracle.itgo.com/SwamiG.gif" alt="SwamiG logo" width="176" height="176" loading="lazy" decoding="async" fetchpriority="high" />
+        <img src="SwamiG.gif" alt="SwamiG logo" width="176" height="176" loading="lazy" decoding="async" fetchpriority="high" />
       </div>
       <h1>SwamiG Institute</h1>
       <div class="tag">Ifá • Isésé • Orisha — Spiritual Education, Rites & Divination</div>

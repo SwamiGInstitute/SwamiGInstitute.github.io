@@ -180,7 +180,7 @@
     <!-- FOOTER -->
     <section class="footer">
       <div>
-        <div class="quote">“Iwa Pele — good moral character. Heaven is home; earth is the marketplace.”</div>
+        <div class="quote">“Extending Royal Legacy. On the shoulders of enlightened ancestors.”</div>
         <div class="small">© 2025 SwamiG Institute • SwamiGInstitute.com • <a href="mailto:AwoSwamiG@gmail.com">AwoSwamiG@gmail.com</a></div>
       </div>
     </section>

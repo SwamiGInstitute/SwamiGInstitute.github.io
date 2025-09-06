@@ -1,5 +1,5 @@
-# SwamiGInstitute.github.io
-<!DOCTYPE html>
+# SwamiG Institute 
+<AwoSwamiG@gmail.com>
 <html lang="en">
 <head>
   <meta charset="utf-8" />

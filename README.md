@@ -122,10 +122,10 @@
     <!-- MISSION -->
     <section class="callout" aria-labelledby="mission">
       <strong id="mission">Our Mission</strong>
-      <p>The mission of SwamiG Institute is to provide lesson plans, agendas, and learning modules for individuals and groups of the uninitiated, grounded in two principles:</p>
+      <p>The mission of SwamiG Institute is to provide lesson plans, agendas, and learning modules for spiritual seekers and groups of the uninitiated, grounded in two principles:</p>
       <ul style="margin:8px 0 0 18px;color:var(--muted)">
-        <li><em>Iwa Pele — good moral character</em></li>
-        <li><em>Heaven is home; earth is the marketplace</em></li>
+        <li><em>Extending Royal Legacy</em></li>
+        <li><em>On the shoulders of Enlightened ancestors</em></li>
       </ul>
     </section>
 

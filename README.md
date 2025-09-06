@@ -1,5 +1,5 @@
 # Extending Royal Legacy 
-# On the shoulders of enlightened Ancestors
+# 
 <html lang="en">
 <head>
   <meta charset="utf-8" />

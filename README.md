@@ -7,7 +7,7 @@
   <meta name="theme-color" content="#0b0b0f" />
   <meta name="color-scheme" content="dark" />
   <title>SwamiG Institute 70-888-Swami — Ifá • Isésé • Orisha | Spiritual Education, Initiation & Divination</title>
-  <meta name="description" content="SwamiG Institute offers Ifá / Isésé / Orisha education, divination, rites of passage, and priesthood preparation. Michigan nonprofit — 501(c)(3) recognition pending" />
+  <meta name="description" content="SwamiG Institute offers Ifá / Isésé / Orisha education, divination, rites of passage, initiation and priesthood preparation. Michigan nonprofit — 501(c)(3) recognition pending" />
   <style>
     :root{--bg:#0b0b0f;--ink:#eaeaf2;--muted:#b5b5c4;--accent:#bb66ff;--radius:20px}
     *{box-sizing:border-box}

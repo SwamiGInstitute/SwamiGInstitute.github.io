@@ -1,122 +1,171 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <meta name="theme-color" content="#0b0b0f" />
   <meta name="color-scheme" content="dark" />
-  <title>SwamiG Institute 70-888-Swami — Ifá • Isésé • Orisha | Spiritual Education, Initiation & Divination</title>
-  <meta name="description" content="SwamiG Institute offers Ifá / Isésé / Orisha education, divination, rites of passage, and priesthood preparation. Michigan nonprofit — 501(c)(3) recognition pending" />
+  <title>SwamiG Institute 70-888-Swami — Ifá • Isésé • Orisha | Divination, Initiation & Spiritual Education</title>
+  <meta name="description" content="Call 70-888-Swami SwamiG Institute offers Ifá / Isésé / Orisha divination, priesthood initiations, rites of passage, and spiritual education. Michigan nonprofit — 501(c)(3) recognition pending." />
   <style>
-    :root{--bg:#0b0b0f;--ink:#eaeaf2;--muted:#b5b5c4;--accent:#bb66ff;--radius:20px}
-    *{box-sizing:border-box}
-    html,body{scroll-behavior:smooth}
-    body{margin:0;font:400 16px/1.55 system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;background:var(--bg);color:var(--ink)}
-
-    /* Accessibility + reduced motion */
-    :focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:8px}
-    @media (prefers-reduced-motion:reduce){
-      .top-card,.card,.btn.pulse{transition:none!important;animation:none!important}
+    :root{
+      --bg:#0b0b0f;
+      --ink:#eaeaf2;
+      --muted:#b5b5c4;
+      --accent:#bb66ff;
+      --accent-muted:rgba(187,102,255,0.18);
+      --accent-lineage:rgba(102,255,178,.35);
+      --radius:20px
     }
+    *{box-sizing:border-box}
+    html,body{scroll-behavior:smooth;height:100%}
+    body{margin:0;min-height:100vh;display:flex;flex-direction:column;background:var(--bg);color:var(--ink);font:400 16px/1.55 system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif}
 
     /* Top notice */
-    .noticebar{width:100%;text-align:center;font-size:12px;color:#d9c6ff;background:rgba(187,102,255,.12);border-bottom:1px solid rgba(187,102,255,.25);padding:6px 10px}
+    .noticebar{
+      position:relative;
+      width:100%;
+      text-align:center;
+      font-size:12px;
+      color:#d9c6ff;
+      background:rgba(187,102,255,.12);
+      border-bottom:1px solid rgba(187,102,255,.25);
+      padding:6px 12px;
+    }
+    .notice-center{display:inline-block}
+    .notice-right{
+      position:absolute;
+      right:12px;
+      top:6px;
+      font-size:12px;
+    }
+    .notice-right a{color:#d9c6ff;text-decoration:none}
+    .notice-right a:hover{color:var(--accent)}
 
-    /* Top Cards (now non-clickable) */
+    /* Top Cards */
     .top-cards-wrap{background:rgba(11,11,15,.85);border-bottom:1px solid rgba(255,255,255,.08)}
-    .top-cards{max-width:1100px;margin:0 auto;padding:16px 20px;display:grid;gap:16px}
-    @media(min-width:900px){.top-cards{grid-template-columns:repeat(auto-fit,minmax(170px,1fr))}}
+    .top-cards{max-width:1100px;margin:0 auto;padding:6px 10px;display:grid;gap:8px}
+    @media(min-width:900px){.top-cards{grid-template-columns:repeat(auto-fit,minmax(90px,1fr))}}
     @media(max-width:899px){.top-cards{grid-template-columns:1fr 1fr}}
-    .top-card,.grid .card{position:relative;border-radius:16px;padding:16px;border:1px solid rgba(255,255,255,.12);color:var(--ink);background:linear-gradient(145deg,rgba(30,30,40,.95),rgba(18,18,25,.95));box-shadow:0 2px 6px rgba(0,0,0,.35);transition:transform .25s ease,box-shadow .25s ease,border-color .25s ease}
-    .top-card{cursor:default} /* no click */
-    .top-card:hover,.grid .card:hover{transform:translateY(-6px) scale(1.03);border-color:rgba(255,255,255,.22)}
-    .top-card h3,.card h3{margin:0 0 8px;font:700 20px/1.2 system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif}
-    .top-card p,.card p{margin:0 0 12px;color:var(--muted);font-size:14px}
+    .top-card{
+      position:relative;
+      border-radius:10px;
+      padding:6px;
+      border:1px solid rgba(255,255,255,.12);
+      color:var(--ink);
+      background:linear-gradient(145deg,rgba(30,30,40,.95),rgba(18,18,25,.95));
+      box-shadow:0 1px 3px rgba(0,0,0,.25);
+      transition:transform .2s ease,box-shadow .2s ease,border-color .2s ease;
+      cursor:default;
+    }
+    .top-card:hover{transform:translateY(-2px) scale(1.005);border-color:rgba(255,255,255,.22)}
+    .top-card h3{margin:0 0 4px;font:700 11px/1.2 system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif}
+    .top-card p{margin:0 0 6px;color:var(--muted);font-size:10px;line-height:1.3}
 
-    /* Lightweight accent glows on hover (visual only) */
-    .top-cards .top-card:nth-child(1):hover,.grid .card#divination:hover{box-shadow:0 0 18px rgba(187,102,255,.55)}
-    .top-cards .top-card:nth-child(2):hover,.grid .card#ilekes:hover{box-shadow:0 0 18px rgba(102,187,255,.50)}
-    .top-cards .top-card:nth-child(3):hover,.grid .card#warriors:hover{box-shadow:0 0 18px rgba(255,102,187,.50)}
-    .top-cards .top-card:nth-child(4):hover,.grid .card#hand-of-ifa:hover{box-shadow:0 0 18px rgba(187,255,102,.50)}
-    .top-cards .top-card:nth-child(5):hover,.grid .card#orisha-initiation:hover{box-shadow:0 0 18px rgba(255,187,102,.50)}
+    /* Accent glows */
+    .top-cards .top-card:nth-child(1):hover{box-shadow:0 0 8px rgba(187,102,255,.55)} /* Mission */
+    .top-cards .top-card:nth-child(2):hover{box-shadow:0 0 8px rgba(187,102,255,.55)}
+    .top-cards .top-card:nth-child(3):hover{box-shadow:0 0 8px rgba(102,187,255,.50)}
+    .top-cards .top-card:nth-child(4):hover{box-shadow:0 0 8px rgba(255,102,187,.50)}
+    .top-cards .top-card:nth-child(5):hover{box-shadow:0 0 8px rgba(187,255,102,.50)}
+    .top-cards .top-card:nth-child(6):hover{box-shadow:0 0 8px var(--accent-lineage)}
 
     /* Layout */
-    .wrap{max-width:1100px;margin:auto;padding:24px 20px}
+    .wrap{flex:1;display:flex;justify-content:center;align-items:center;padding:24px 20px}
+    .hero{display:flex;justify-content:center;align-items:center;text-align:center}
+    .hero-block{max-width:600px}
 
-    /* Hero (centered) */
-    .hero{display:flex;flex-direction:column;align-items:center;text-align:center;margin:30px 0 34px}
-    .logo{width:176px;height:176px;border-radius:50%;overflow:hidden;display:grid;place-items:center;border:1px solid rgba(255,255,255,.1);box-shadow:0 0 12px rgba(187,102,255,.30);margin-bottom:18px}
-    h1{margin:0;font-weight:800;font-size:44px;line-height:1.08;letter-spacing:.3px}
-    @media(min-width:960px){h1{font-size:48px}}
-    .tag{color:var(--muted);font-size:16px;margin-top:10px}
+    .logo{
+      max-width:150px;
+      border-radius:50%;
+      overflow:hidden;
+      display:grid;
+      place-items:center;
+      border:1px solid rgba(255,255,255,.1);
+      box-shadow:0 0 12px rgba(187,102,255,.30);
+      margin:0 auto 18px;
+    }
+    .logo img{width:100%;height:auto;border-radius:50%;display:block}
+
+    h1{margin:0;font-weight:800;font-size:36px;line-height:1.08;letter-spacing:.3px}
+    @media(min-width:960px){h1{font-size:42px}}
+    .tag{color:var(--muted);font-size:15px;margin-top:10px}
     .badge{margin-top:10px;font-size:13px;color:#f4d3ff}
     .actions{margin-top:16px;display:flex;flex-wrap:wrap;gap:12px;justify-content:center}
 
-    .callout{background:linear-gradient(180deg,rgba(187,102,255,.10),rgba(187,102,255,.04));border:1px solid rgba(187,102,255,.35);border-radius:var(--radius);padding:18px 16px}
+    /* Button */
+    .btn{border:0;border-radius:12px;padding:10px 18px;font-weight:600;text-decoration:none;display:inline-flex;align-items:center;gap:8px;cursor:pointer}
+    .primary{background:transparent;color:var(--accent);border:1px solid var(--accent)}
+    @keyframes floatPulse{0%,100%{transform:translateY(0);box-shadow:0 0 6px rgba(187,102,255,.15)}50%{transform:translateY(-4px);box-shadow:0 0 12px rgba(187,102,255,.25)}}
+    .btn.primary.float{animation:floatPulse 6s ease-in-out infinite}
 
-    .grid{display:grid;gap:18px;margin-top:20px}
-    @media(min-width:880px){.grid{grid-template-columns:repeat(3,1fr)}}
+    /* Mission */
+    .mission{color:var(--muted);font-size:14px;line-height:1.4;margin-top:40px;text-align:left}
+    .mission strong{color:var(--ink);font-size:17px;display:block;margin-bottom:6px}
+    .mission p{margin:4px 0}
+    .mission ul{margin:6px 0 0 16px;padding:0;color:var(--muted);font-size:14px;line-height:1.3}
+    .mission li{margin-bottom:4px}
 
-    .btn{border:0;border-radius:12px;padding:10px 14px;font-weight:700;text-decoration:none;display:inline-flex;align-items:center;gap:8px;cursor:pointer}
-    .primary{background:var(--accent);color:#120724}
-    .ghost{border:1px solid rgba(255,255,255,.25);background:transparent;color:var(--ink)}
+    /* Donate */
+    .donate{margin-top:10px;font-size:13px}
+    .donate a{color:var(--muted);text-decoration:none;border-bottom:1px dotted rgba(255,255,255,.25)}
+    .donate a:hover{color:var(--accent);border-bottom-color:var(--accent)}
 
     /* Footer */
-    .footer{display:flex;flex-wrap:wrap;gap:12px;justify-content:space-between;align-items:center;border-top:1px dashed rgba(255,255,255,.15);padding-top:16px;margin-top:28px;color:var(--muted)}
-    .small{font-size:12px;color:var(--muted)}
-    .quote{font-style:italic;color:var(--muted)}
-
-    /* Micro note (barely visible) */
-    .micro-note{font-size:9px;color:rgba(200,180,255,.22);text-align:center;margin:8px 0 14px}
-
-    /* Gentle CTA pulse */
-    @keyframes pulseGlow{0%{box-shadow:0 0 10px rgba(187,102,255,.35)}50%{box-shadow:0 0 22px rgba(187,102,255,.7)}100%{box-shadow:0 0 10px rgba(187,102,255,.35)}}
-    .grid .card#divination{animation:pulseGlow 4s ease-in-out infinite}
-    .grid .card#divination .btn.primary,.actions .btn.primary.pulse{animation:pulseGlow 3s ease-in-out infinite}
+    .footer{display:flex;flex-wrap:wrap;gap:12px;justify-content:space-between;align-items:center;border-top:1px dashed rgba(255,255,255,.15);padding-top:16px;margin-top:60px;color:var(--muted)}
+    .bottom-note{font-size:9px;text-align:center;color:rgba(200,180,255,.12);margin:20px 0 6px}
   </style>
   <script>
-    // Load Calendly on demand only (keeps page fast)
     function openCalendly(url){
       if(!window.__calendlyLoaded){
         const l=document.createElement('link'); l.rel='stylesheet'; l.href='https://assets.calendly.com/assets/external/widget.css';
         const s=document.createElement('script'); s.async=true; s.src='https://assets.calendly.com/assets/external/widget.js';
         s.onload=function(){ window.__calendlyLoaded=true; Calendly.initPopupWidget({url}); };
         document.head.appendChild(l); document.head.appendChild(s);
-      }else{
-        Calendly.initPopupWidget({url});
-      }
+      }else{ Calendly.initPopupWidget({url}); }
       return false;
     }
   </script>
 </head>
 <body>
-  <div class="noticebar">Call <strong>70-888-Swami</strong> • Michigan nonprofit — 501(c)(3) recognition pending</div>
+  <div class="noticebar">
+    <div class="notice-center">Call <strong>70-888-Swami</strong> • Michigan nonprofit — 501(c)(3) recognition pending</div>
+    <div class="notice-right"><a href="mailto:AwoSwamiG@gmail.com">AwoSwamiG@gmail.com</a></div>
+  </div>
 
-  <!-- Top Cards (non-clickable) -->
+  <!-- Top Cards -->
   <div class="top-cards-wrap">
     <div class="top-cards" aria-label="Quick actions">
+      <div class="top-card"><h3>0 — Mission</h3><p>Our guiding vision and purpose</p></div>
       <div class="top-card"><h3>1 — Divination</h3><p>How to Divine classes w/ assignments</p></div>
       <div class="top-card"><h3>2 — Ilekes</h3><p>Coursework, rituals, consecrated beads & support</p></div>
       <div class="top-card"><h3>3 — Warriors</h3><p>È&#7779;ù • Ògún • Ò&#7779;óòsì • Ò&#7779;un</p></div>
       <div class="top-card"><h3>4 — Hand of Ifá</h3><p>Ìkín consecration / Ì&#7779;&#7865;&#768;&#7779;e</p></div>
-      <div class="top-card"><h3>5 — Orisha Initiation</h3><p>Full consecration & training</p></div>
+      <div class="top-card"><h3>5 — Orisha Initiations</h3><p>Priesthood pathways & ceremonies</p></div>
+      <div class="top-card">
+        <a href="https://swamiginstitute.github.io/Lineage/" style="text-decoration:none; color:inherit;">
+          <h3>6 — Lineage</h3>
+          <p>Anke–Karade Lineage</p>
+        </a>
+      </div>
     </div>
   </div>
 
   <div class="wrap">
-    <!-- HERO -->
     <div class="hero">
-      <div class="logo">
-        <img src="SwamiG.gif" alt="SwamiG logo" width="176" height="176" loading="lazy" decoding="async" fetchpriority="high" />
-      </div>
-      <h1>SwamiG Institute</h1>
-      <div class="tag">Ifá • Isésé • Orisha — Spiritual Education, Rites & Divination</div>
-      <div class="badge">Michigan nonprofit • <strong>501(c)(3) recognition pending — $DrSwamiG</strong></div>
-      <div class="actions">
-        <a class="btn primary pulse" href="#" onclick="return openCalendly('https://calendly.com/awoswamig/30min');">See SwamiG</a>
-        <a class="btn ghost" href="mailto:AwoSwamiG@gmail.com">Email Us</a>
+      <div class="hero-block">
+        <div class="logo">
+          <img src="http://swamiginstitute.github.io/SwamiG.gif" alt="SwamiG logo" loading="lazy" decoding="async" fetchpriority="high" />
+        </div>
+        <h1>SwamiG Institute</h1>
+        <div class="tag">Ifá • Isésé • Orisha — Spiritual Education, Rites & Divination</div>
+        <div class="badge">Michigan nonprofit • <strong>501(c)(3) recognition pending — $DrSwamiG</strong></div>
+        <div class="actions">
+          <a class="btn primary float" href="#" onclick="return openCalendly('https://calendly.com/awoswamig/30min');">Need a Divination?</a>
+        </div>
       </div>
     </div>
-
+  </div>
     <!-- MISSION -->
     <section class="callout" aria-labelledby="mission">
       <strong id="mission">Our Mission</strong>

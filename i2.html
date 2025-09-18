@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="theme-color" content="#0b0b0f" />
+  <meta name="color-scheme" content="dark" />
+  <title>SwamiG Institute 70-888-Swami — Ifá • Isésé • Orisha | Divination, Initiation & Spiritual Education</title>
+  <meta name="description" content="Call 70-888-Swami SwamiG Institute offers Ifá / Isésé / Orisha divination, priesthood initiations, rites of passage, and spiritual education. Michigan nonprofit — 501(c)(3) recognition pending." />
+  <style>
+    :root{
+      --bg:#0b0b0f;
+      --ink:#eaeaf2;
+      --muted:#b5b5c4;
+      --accent:#bb66ff;
+      --accent-muted:rgba(187,102,255,0.18);
+      --accent-lineage:rgba(102,255,178,.35);
+      --radius:20px
+    }
+    *{box-sizing:border-box}
+    html,body{scroll-behavior:smooth;height:100%}
+    body{margin:0;min-height:100vh;display:flex;flex-direction:column;background:var(--bg);color:var(--ink);font:400 16px/1.55 system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif}
+
+    /* Top notice */
+    .noticebar{
+      position:relative;
+      width:100%;
+      text-align:center;
+      font-size:12px;
+      color:#d9c6ff;
+      background:rgba(187,102,255,.12);
+      border-bottom:1px solid rgba(187,102,255,.25);
+      padding:6px 12px;
+    }
+    .notice-center{display:inline-block}
+    .notice-right{
+      position:absolute;
+      right:12px;
+      top:6px;
+      font-size:12px;
+    }
+    .notice-right a{color:#d9c6ff;text-decoration:none}
+    .notice-right a:hover{color:var(--accent)}
+
+    /* Top Cards */
+    .top-cards-wrap{background:rgba(11,11,15,.85);border-bottom:1px solid rgba(255,255,255,.08)}
+    .top-cards{max-width:1100px;margin:0 auto;padding:6px 10px;display:grid;gap:8px}
+    @media(min-width:900px){.top-cards{grid-template-columns:repeat(auto-fit,minmax(90px,1fr))}}
+    @media(max-width:899px){.top-cards{grid-template-columns:1fr 1fr}}
+    .top-card{
+      position:relative;
+      border-radius:10px;
+      padding:6px;
+      border:1px solid rgba(255,255,255,.12);
+      color:var(--ink);
+      background:linear-gradient(145deg,rgba(30,30,40,.95),rgba(18,18,25,.95));
+      box-shadow:0 1px 3px rgba(0,0,0,.25);
+      transition:transform .2s ease,box-shadow .2s ease,border-color .2s ease;
+      cursor:default;
+    }
+    .top-card:hover{transform:translateY(-2px) scale(1.005);border-color:rgba(255,255,255,.22)}
+    .top-card h3{margin:0 0 4px;font:700 11px/1.2 system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif}
+    .top-card p{margin:0 0 6px;color:var(--muted);font-size:10px;line-height:1.3}
+
+    /* Accent glows */
+    .top-cards .top-card:nth-child(1):hover{box-shadow:0 0 8px rgba(187,102,255,.55)} /* Mission */
+    .top-cards .top-card:nth-child(2):hover{box-shadow:0 0 8px rgba(187,102,255,.55)}
+    .top-cards .top-card:nth-child(3):hover{box-shadow:0 0 8px rgba(102,187,255,.50)}
+    .top-cards .top-card:nth-child(4):hover{box-shadow:0 0 8px rgba(255,102,187,.50)}
+    .top-cards .top-card:nth-child(5):hover{box-shadow:0 0 8px rgba(187,255,102,.50)}
+    .top-cards .top-card:nth-child(6):hover{box-shadow:0 0 8px var(--accent-lineage)}
+
+    /* Layout */
+    .wrap{flex:1;display:flex;justify-content:center;align-items:center;padding:24px 20px}
+    .hero{display:flex;justify-content:center;align-items:center;text-align:center}
+    .hero-block{max-width:600px}
+
+    .logo{
+      max-width:150px;
+      border-radius:50%;
+      overflow:hidden;
+      display:grid;
+      place-items:center;
+      border:1px solid rgba(255,255,255,.1);
+      box-shadow:0 0 12px rgba(187,102,255,.30);
+      margin:0 auto 18px;
+    }
+    .logo img{width:100%;height:auto;border-radius:50%;display:block}
+
+    h1{margin:0;font-weight:800;font-size:36px;line-height:1.08;letter-spacing:.3px}
+    @media(min-width:960px){h1{font-size:42px}}
+    .tag{color:var(--muted);font-size:15px;margin-top:10px}
+    .badge{margin-top:10px;font-size:13px;color:#f4d3ff}
+    .actions{margin-top:16px;display:flex;flex-wrap:wrap;gap:12px;justify-content:center}
+
+    /* Buttons */
+    .btn{border:0;border-radius:12px;padding:10px 18px;font-weight:600;text-decoration:none;display:inline-flex;align-items:center;gap:8px;cursor:pointer}
+    .primary{background:transparent;color:var(--accent);border:1px solid var(--accent)}
+    .ghost{background:transparent;color:var(--muted);border:1px dashed rgba(255,255,255,.25)}
+    @keyframes floatPulse{0%,100%{transform:translateY(0);box-shadow:0 0 6px rgba(187,102,255,.15)}50%{transform:translateY(-4px);box-shadow:0 0 12px rgba(187,102,255,.25)}}
+    .btn.primary.float{animation:floatPulse 6s ease-in-out infinite}
+
+    /* Mission & sections */
+    .callout{max-width:900px;margin:0 auto;padding:20px}
+    .callout strong{font-size:18px}
+    .callout p{color:var(--muted)}
+
+    /* Offerings grid */
+    .grid{max-width:1100px;margin:10px auto 0;display:grid;gap:14px;padding:0 10px}
+    @media(min-width:900px){.grid{grid-template-columns:repeat(3,1fr)}}
+    @media(max-width:899px){.grid{grid-template-columns:1fr}}
+
+    .card{
+      border:1px solid rgba(255,255,255,.12);
+      border-radius:14px;
+      padding:14px;
+      background:linear-gradient(145deg,rgba(30,30,40,.95),rgba(18,18,25,.95));
+      box-shadow:0 1px 3px rgba(0,0,0,.25);
+    }
+    .card h3{margin:0 0 8px}
+    .card p{margin:0 0 10px;color:var(--muted)}
+    .btns{display:flex;gap:10px;flex-wrap:wrap}
+
+    /* Footer */
+    .footer{display:flex;flex-wrap:wrap;gap:12px;justify-content:space-between;align-items:center;border-top:1px dashed rgba(255,255,255,.15);padding:16px 10px;margin:60px auto 0;max-width:1100px;color:var(--muted)}
+    .bottom-note{font-size:9px;text-align:center;color:rgba(200,180,255,.12);margin:20px 0 6px}
+    .micro-note{font-size:10px;text-align:center;color:rgba(200,180,255,.20);margin:10px 0 24px}
+  </style>
+</head>
+<body>
+  <div class="noticebar">
+    <div class="notice-center">Call <strong>70-888-Swami</strong> • Michigan nonprofit — 501(c)(3) recognition pending</div>
+    <div class="notice-right"><a href="mailto:Baba@SwamigInstitute.com">Baba@SwamigInstitute.com</a></div>
+  </div>
+
+  <!-- Top Cards -->
+  <div class="top-cards-wrap">
+    <div class="top-cards" aria-label="Quick actions">
+      <div class="top-card"><h3>0 — Mission</h3><p>Our guiding vision and purpose</p></div>
+      <div class="top-card"><h3>1 — Divination</h3><p>How to Divine classes w/ assignments</p></div>
+      <div class="top-card"><h3>2 — Ilekes</h3><p>Coursework, rituals, consecrated beads & support</p></div>
+      <div class="top-card"><h3>3 — Warriors</h3><p>È&#7779;ù • Ògún • Ò&#7779;óòsì • Ò&#7779;un</p></div>
+      <div class="top-card"><h3>4 — Hand of Ifá</h3><p>Ìkín consecration / Ì&#7779;&#7865;&#768;&#7779;e</p></div>
+      <div class="top-card"><h3>5 — Orisha Initiations</h3><p>Priesthood pathways & ceremonies</p></div>
+      <div class="top-card">
+        <a href="https://swamiginstitute.github.io/Lineage/" style="text-decoration:none; color:inherit;">
+          <h3>6 — Lineage</h3>
+          <p>Anke–Karade Lineage</p>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <div class="wrap">
+    <div class="hero">
+      <div class="hero-block">
+        <div class="logo">
+          <img src="http://swamiginstitute.github.io/SwamiG.gif" alt="SwamiG logo" loading="lazy" decoding="async" fetchpriority="high" />
+        </div>
+        <h1>SwamiG Institute</h1>
+        <div class="tag">Ifá • Isésé • Orisha — Spiritual Education, Rites & Divination</div>
+        <div class="badge">Michigan nonprofit • <strong>501(c)(3) recognition pending — $DrSwamiG</strong></div>
+        <div class="actions">
+          <!-- Picktime trigger -->
+          <a class="btn primary float" href="#" onclick="return openPicktime();">Need a Divination?</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- MISSION -->
+  <section class="callout" aria-labelledby="mission">
+    <strong id="mission">Our Mission</strong>
+    <p>The mission of SwamiG Institute is to provide lesson plans, agendas, and learning modules for spiritual seekers and groups of the uninitiated, grounded in two principles:</p>
+    <ul style="margin:8px 0 0 18px;color:var(--muted)">
+      <li><em>Extending Royal Legacy</em></li>
+      <li><em>On the shoulders of Enlightened ancestors</em></li>
+    </ul>
+  </section>
+
+  <!-- OFFERINGS -->
+  <section class="grid" aria-label="Offerings">
+    <article class="card" id="divination" aria-labelledby="divination-title">
+      <h3 id="divination-title">Spiritual Divination Session</h3>
+      <p>30–60 minute Ifá divination with actionable guidance and written follow-up notes.</p>
+      <div class="btns">
+        <a class="btn primary" href="#" onclick="return openPicktime();">Schedule</a>
+        <a class="btn ghost" href="https://www.paypal.com/ncp/payment/5M949GKNMDHJN" target="_blank" rel="noopener">Pay</a>
+      </div>
+    </article>
+
+    <article class="card" id="ilekes" aria-labelledby="ilekes-title">
+      <h3 id="ilekes-title">Ilekes <em>(Authentic Self)</em></h3>
+      <p>Consecrated ilekes prepared according to lineage practice. Includes orientation + debriefing.</p>
+      <div class="btns">
+        <a class="btn primary" href="#" onclick="return openPicktime();">Book</a>
+        <a class="btn ghost" href="https://www.paypal.com/ncp/payment/5M949GKNMDHJN" target="_blank" rel="noopener">Pay</a>
+      </div>
+    </article>
+
+    <article class="card" id="warriors" aria-labelledby="warriors-title">
+      <h3 id="warriors-title">Warrior Set <em>(Ancestral Cleansing)</em></h3>
+      <p>Consecration and instruction for daily veneration. Includes safety & care guide, plus mentoring.</p>
+      <div class="btns">
+        <a class="btn primary" href="#" onclick="return openPicktime();">Book</a>
+        <a class="btn ghost" href="https://www.paypal.com/ncp/payment/5M949GKNMDHJN" target="_blank" rel="noopener">Pay</a>
+      </div>
+    </article>
+
+    <article class="card" id="hand-of-ifa" aria-labelledby="hand-title">
+      <h3 id="hand-title">Hand of Ifá <em>(Animating Deity Within)</em></h3>
+      <p>Foundational rite conferring Odu guidance, taboos, and prescriptions.</p>
+      <div class="btns">
+        <a class="btn primary" href="#" onclick="return openPicktime();">Book</a>
+        <a class="btn ghost" href="mailto:AwoSwamiG@gmail.com">Ask</a>
+      </div>
+    </article>
+
+    <article class="card" id="orisha-initiation" aria-labelledby="orisha-title">
+      <h3 id="orisha-title">Orisha Initiation</h3>
+      <p>Comprehensive initiation rites into Òrì&#7779;à tradition. Includes interviews, preparation, and mentorship.</p>
+      <div class="btns">
+        <a class="btn primary" href="#" onclick="return openPicktime();">Apply</a>
+        <a class="btn ghost" href="mailto:AwoSwamiG@gmail.com">Ask a Question</a>
+      </div>
+    </article>
+  </section>
+
+  <!-- FOOTER -->
+  <section class="footer">
+    <div>
+      <div class="quote">“Extending Royal Legacy. On the shoulders of enlightened ancestors.”</div>
+      <div class="small">© 2025 SwamiG Institute • SwamiGInstitute.com • <a href="mailto:Baba@SwamigInstitute.com">Baba@SwamigInstitute.com</a></div>
+    </div>
+  </section>
+
+  <div class="micro-note">
+    Governered by [Herukhuti(+)/Het Heru(-)] / [Ogbe/Okanran(+) Sebek(Ogbe)]
+  </div>
+
+  <!-- Picktime embed (PayPal supported) -->
+  <div id="picktime-scheduler" style="display:none;"></div>
+  <script src="https://embed.picktime.com/script.js" async></script>
+  <script>
+    // Opens your Picktime (PayPal-enabled) booking page as a popup
+    function openPicktime() {
+      // Create the button only once
+      if (!document.querySelector('.picktime-button')) {
+        Picktime.addButton({
+          class: "picktime-button",
+          label: "Book Appointment",
+          url: "https://www.picktime.com/530305e5-d9d9-459d-b27d-df88779c4845"
+        });
+      }
+      // Defer click until script is ready
+      function clickWhenReady(retries = 20) {
+        const btn = document.querySelector('.picktime-button');
+        if (btn) { btn.click(); return false; }
+        if (retries > 0) setTimeout(() => clickWhenReady(retries-1), 150);
+        return false;
+      }
+      return clickWhenReady();
+    }
+  </script>
+</body>
+</html>
